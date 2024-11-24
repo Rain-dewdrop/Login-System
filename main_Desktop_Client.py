@@ -48,9 +48,8 @@ else:
     uistyle = Default_style
     t.timetips("配置文件不存在")
 
-Login_system_Version = "0.0.1"  #版本号
 size = 500, 300
-titlesize = f"github.com/Rain-dewdrop | Login-System-Client {Login_system_Version}"  #窗口基础设置
+titlesize = f"github.com/Rain-dewdrop/Login-System"  #窗口基础设置
 t.timetips("登录窗口设置初始化成功！")
 
 root = tkt.Tk(size, title=titlesize)  #登录窗口
@@ -116,7 +115,7 @@ def login(username_input, password_input):
                 if not hwid == "" :
                     if hwid == t.b64(config.get('Login', 'hwid')) :
                         t.timetips("登录成功！")
-                        t.send_notification("github.com/Rain-dewdrop", "登录成功,欢迎回来！")
+                        t.send_notification("github.com/Rain-dewdrop/Login-System", "登录成功,欢迎回来！")
                         username_b64 = t.b64code(username)
                         password_b64 = t.b64code(password)
                         hwid_b64 = t.b64code(hwid)
@@ -134,7 +133,7 @@ def login(username_input, password_input):
                         t.message("Hwid验证失败,请不要复制他人的配置文件,请在删除配置文件后重试!")
                 else :
                     t.timetips("登录成功！")
-                    t.send_notification("github.com/Rain-dewdrop", "登录成功,欢迎回来！")
+                    t.send_notification("github.com/Rain-dewdrop/Login-System", "登录成功,欢迎回来！")
                     username_b64 = t.b64code(username)
                     password_b64 = t.b64code(password)
                     hwid_b64 = t.b64code(hwid)
@@ -158,7 +157,7 @@ def login(username_input, password_input):
             if t.HEX(username) == usernameHEX and t.HEX(password) == passwordHEX :
                 if not hwid == "" :
                         t.timetips("登录成功！")
-                        t.send_notification("github.com/Rain-dewdrop", "登录成功,欢迎回来！")
+                        t.send_notification("github.com/Rain-dewdrop/Login-System", "登录成功,欢迎回来！")
                         username_b64 = t.b64code(username)
                         password_b64 = t.b64code(password)
                         hwid_b64 = t.b64code(hwid)
