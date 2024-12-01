@@ -5,3 +5,4 @@
 # iv = os.urandom(16)  # AES需要一个128位的IV
 # print(iv)
 # print(key)
+import asyncio as a

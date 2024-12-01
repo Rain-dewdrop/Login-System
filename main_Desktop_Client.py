@@ -1,5 +1,5 @@
 import tkintertools as tkt
-import const as t
+import definition as t
 import os
 import pywinstyles
 import configparser
