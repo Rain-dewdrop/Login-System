@@ -1,1 +1,1 @@
-main_Server_Client.py
+python main_Server_Client.py
