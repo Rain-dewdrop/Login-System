@@ -2,10 +2,10 @@ import asyncio
 import const
 import definition as t
 
-async def request_data(data_to_send,):
+async def request_data(data_to_send):
     # 连接到服务器
     reader, writer = await asyncio.open_connection(const.SERVER_HOST, const.Port_Number)
-    
+    t.timetips(f"向服务端发送数据 {data_to_send}")
     # 发送数据
     writer.write(data_to_send.encode('utf-8'))
     await writer.drain()  # 确保数据发送完成
