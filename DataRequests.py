@@ -21,4 +21,4 @@ async def request_data(data_to_send):
     return saverdata
 
 # 运行客户端
-asyncio.run(request_data('Hello, server!'))
+asyncio.run(request_data('request_verify_login_password_{密码哈希值}_nameword_{用户名哈希值}'))
