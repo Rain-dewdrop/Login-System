@@ -1,5 +1,5 @@
 import definition as t
-
+import sys
 def ClientRequestProcessing(command):
     # 判断是否是验证登录信息的命令
     if command.startswith("request_verify_login_password_") and "_nameword_" in command:
@@ -23,3 +23,4 @@ def ClientRequestProcessing(command):
     else:
         t.timetips("Unknown command.")
         return "Unknown command."
+print(sys.path)
