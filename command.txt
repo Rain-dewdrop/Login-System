@@ -1,4 +1,0 @@
-请求命令:
-[request_verify_login_password_{密码哈希值}_nameword_{用户名哈希值}] 验证登录信息
-[request_get_iv] 获取服务端iv
-[request_get_key] 获取服务端key
