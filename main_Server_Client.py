@@ -1,7 +1,7 @@
 import asyncio as a
 import Share.const as const
 import Share.definition as t
-import Share.ClientRequestProcessing as c
+
 
 
 async def handle_client(reader, writer):
@@ -10,7 +10,7 @@ async def handle_client(reader, writer):
     
     # 将字节数据解码为字符串，然后处理请求
     command = data.decode('utf-8')
-    response = c.ClientRequestProcessing(command)
+    response = t.ClientRequestProcessing(command)
     
     # 将处理结果编码为字节，然后发送给客户端
     writer.write(response.encode('utf-8'))

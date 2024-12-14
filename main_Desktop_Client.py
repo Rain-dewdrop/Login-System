@@ -39,7 +39,7 @@ root.center()
 t.timetips("登录窗口居中显示成功！")
 
 cv = tkt.Canvas(root, zoom_item=True, keep_ratio="min", free_anchor=True)
-cv.place(width=1280, height=720, x=640, y=360, anchor="center")       #窗口组件
+cv.place(width=1280, height=720, x=640, y=360, anchor="center")       #窗口组件   
 # 存储InputBox实例
 tkt.Image(cv, (w/2, h/2),(w,h), image=tkt.PhotoImage(file=os.path.join(directory_path,"Resource","background.png")), anchor="center")
 tkt.Text(cv, (450, 110), text="登 录", fontsize=25, anchor="center")
@@ -162,9 +162,9 @@ else:
     t.timetips("登录状态验证失败")
     sys.exit()
 
-w__ = 650
-h__ = 380
-size = w__,h__
+w = 650
+h = 380
+size = w,h
 
 root = tkt.Tk(size, title=titlesize)  #功能窗口
 t.timetips("功能窗口创建成功！")
@@ -172,8 +172,8 @@ t.timetips("功能窗口创建成功！")
 root.center()
 t.timetips("功能窗口居中显示成功！")
 
-root.minsize(w__, h__)  #最小窗口大小
-root.maxsize(w__, h__)  #最大窗口大小
+root.minsize(w, h)  #最小窗口大小
+root.maxsize(w, h)  #最大窗口大小
 t.timetips("功能窗口大小锁定成功！")
 
 cv = tkt.Canvas(root, zoom_item=True)
