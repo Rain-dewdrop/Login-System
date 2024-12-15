@@ -4,6 +4,7 @@ import hashlib
 import configparser
 import wmi
 import base64
+import threading
 from plyer import notification
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
@@ -13,12 +14,13 @@ import os
 key = b'\xb1T\xa3)s\x0ei-\x8c,\x02\xe7\xc3c=\xb0\x98\x86}<\x956\x96\xa0G\xa6-$"#\xdf\x8c'  # 32字节，用于AES-256
 iv = b'\xa6\x0eE\x19\xdeu\x10It\x00\x1cb\x95\x88)~' # 16字节，用于AES
 
-
 current_path = os.path.realpath(__file__)
 directory_path = os.path.dirname(current_path)  #当前文件路径
 config_file_path = os.path.join(directory_path, 'config.ini')
 
 config = configparser.ConfigParser()
+
+condition = threading.Condition()
 
 def timetips(message):
 
