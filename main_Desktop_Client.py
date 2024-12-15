@@ -34,8 +34,8 @@ Overlay.disabled(True)
 def OverlayAnimation():
     t.timetips('加载遮罩动画')
     Overlay.moveto(w/2, (h/2)*3)
-    animation.MoveComponent(Overlay, 1000, (0, 0-h), controller=animation.smooth, fps=60).start(delay=100)
-    animation.MoveComponent(Overlay, 800, (w, 0), controller=animation.smooth, fps=60).start(delay=1500)
+    animation.MoveComponent(Overlay, 800, (0, 0-h), controller=animation.smooth, fps=60).start(delay=100)
+    animation.MoveComponent(Overlay, 600, (w, 0), controller=animation.smooth, fps=60).start(delay=1500)
     
 def BackMainMenu():
     RegisterMenuButton.disabled(False)
