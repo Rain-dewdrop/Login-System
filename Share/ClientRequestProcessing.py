@@ -1,4 +1,4 @@
-import definition as t
+from timetips import *
 import sys
 def ClientRequestProcessing(command):
     # 判断是否是验证登录信息的命令
@@ -21,6 +21,6 @@ def ClientRequestProcessing(command):
         print(5)
         return "5"
     else:
-        t.timetips("Unknown command.")
+        timetips("Unknown command.")
         return "Unknown command."
 print(sys.path)
