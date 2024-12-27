@@ -2,7 +2,6 @@
 # Login System
 
 
-![Logo](https://raw.githubusercontent.com/Rain-dewdrop/Login-System/refs/heads/main/icon.png)
 
 
 ## 安装
